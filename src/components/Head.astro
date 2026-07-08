@@ -1,0 +1,18 @@
+---
+import Favicon from '../assets/favicon.svg';
+
+const { title = "Jack O'Donnell", ...props} = Astro.props;
+
+---
+<Favicon />
+<title>{title}</title>
+<meta name="description" content="Jack O'Donnell's personal website" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#000000" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-title" content={title} />
+<meta name="msapplication-TileColor" content="#000000" />
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+---
