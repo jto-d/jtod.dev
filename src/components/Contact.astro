@@ -1,0 +1,36 @@
+---
+import Footer from '@components/Footer.astro';
+import SectionHeading from '@components/SectionHeading.astro';
+import { profile } from '@data/site';
+---
+
+<section class="contact" id="contact">
+  <SectionHeading eyebrow="Contact — 05" />
+
+  <a href={`mailto:${profile.email}`} class="email">{profile.email}</a>
+
+  <Footer />
+</section>
+
+<style>
+  .contact {
+    padding: 110px var(--section-padding-x) 90px;
+    border-top: var(--section-border);
+    background: var(--gradient-contact);
+  }
+
+  .email {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 58px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .email:hover {
+    color: var(--color-accent);
+  }
+</style>

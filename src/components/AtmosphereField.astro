@@ -1,0 +1,100 @@
+---
+// Decorative animated gradient blobs with a noise overlay, used behind the hero.
+// Purely presentational, so it's hidden from assistive tech and out of tab order.
+---
+
+<div class="field" aria-hidden="true">
+  <div class="wash"></div>
+  <div class="blobs">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="blob blob-5"></span>
+  </div>
+  <div class="noise"></div>
+</div>
+
+<style>
+  .field {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .wash {
+    position: absolute;
+    inset: -10%;
+    background: var(--color-bg-field);
+  }
+
+  .blobs {
+    position: absolute;
+    inset: 0;
+    animation: hueshift 24s ease-in-out infinite;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(30px);
+  }
+
+  .blob-1 {
+    width: 620px;
+    height: 620px;
+    top: 2%;
+    left: 26%;
+    background: radial-gradient(circle at 40% 40%, var(--color-blob-cyan), rgba(127, 208, 214, 0) 68%);
+    animation: drift1 26s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    width: 560px;
+    height: 560px;
+    top: 34%;
+    left: 6%;
+    background: radial-gradient(circle at 50% 50%, var(--color-blob-blue), rgba(106, 168, 224, 0) 66%);
+    filter: blur(36px);
+    animation: drift2 32s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    width: 520px;
+    height: 520px;
+    top: 52%;
+    left: 30%;
+    background: radial-gradient(circle at 50% 50%, var(--color-blob-light-cyan), rgba(154, 211, 230, 0) 64%);
+    filter: blur(34px);
+    animation: drift3 30s ease-in-out infinite;
+  }
+
+  .blob-4 {
+    width: 640px;
+    height: 640px;
+    top: -6%;
+    left: 64%;
+    background: radial-gradient(circle at 50% 50%, var(--color-blob-periwinkle), rgba(183, 201, 238, 0) 62%);
+    filter: blur(40px);
+    animation: drift1 34s ease-in-out infinite;
+  }
+
+  .blob-5 {
+    width: 560px;
+    height: 560px;
+    top: 56%;
+    left: 60%;
+    background: radial-gradient(circle at 50% 50%, var(--color-blob-lavender), rgba(195, 185, 230, 0) 64%);
+    filter: blur(40px);
+    animation: drift2 28s ease-in-out infinite;
+  }
+
+  .noise {
+    position: absolute;
+    inset: -20%;
+    background-image: url('/textures/noise-cool.png');
+    background-size: 130px 130px;
+    image-rendering: pixelated;
+    opacity: 0.6;
+  }
+</style>

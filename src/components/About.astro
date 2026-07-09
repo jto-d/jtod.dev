@@ -1,0 +1,64 @@
+---
+import SectionHeading from '@components/SectionHeading.astro';
+import { focusAreas, profile } from '@data/site';
+---
+
+<section class="about">
+  <SectionHeading eyebrow="About — 01" detail={`${profile.role} — ${profile.location}`.toUpperCase()} />
+
+  <p class="statement">
+    I&rsquo;m {profile.name}, a software engineer focused on <span class="accent">infrastructure and developer
+    tooling</span>. I care about systems that stay reliable as they grow, and about the quiet interfaces that hold a
+    product together.
+  </p>
+
+  <div class="grid">
+    {focusAreas.map((area) => (
+      <div>
+        <div class="label">{area.label.toUpperCase()}</div>
+        {area.body}
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 110px var(--section-padding-x);
+    border-top: var(--section-border);
+  }
+
+  .statement {
+    max-width: 920px;
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    text-wrap: pretty;
+    margin: 54px 0 0;
+  }
+
+  .statement .accent {
+    color: var(--color-accent);
+  }
+
+  .grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 920px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 12px;
+  }
+</style>

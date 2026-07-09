@@ -1,0 +1,19 @@
+---
+import Now from '@components/Now.astro';
+import Writing from '@components/Writing.astro';
+---
+
+<section class="journal" id="writing">
+  <Writing />
+  <Now />
+</section>
+
+<style>
+  .journal {
+    padding: 100px var(--section-padding-x);
+    border-top: var(--section-border);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+  }
+</style>

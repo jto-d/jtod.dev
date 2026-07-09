@@ -1,0 +1,48 @@
+---
+import { profile, socialLinks } from '@data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="social">
+    {socialLinks.map((link) => (
+      <a href={link.href}>{link.label.toUpperCase()}</a>
+    ))}
+  </div>
+  <div class="copyright">{profile.name.toUpperCase()} &copy; {year}</div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .social {
+    display: flex;
+    gap: 30px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .social a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social a:hover {
+    color: var(--color-accent);
+  }
+
+  .copyright {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+  }
+</style>

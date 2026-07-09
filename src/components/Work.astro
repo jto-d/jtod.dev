@@ -1,0 +1,78 @@
+---
+import SectionHeading from '@components/SectionHeading.astro';
+import { workItems } from '@data/site';
+---
+
+<section class="work" id="work">
+  <SectionHeading eyebrow="Selected work — 02" detail="Infrastructure & Tooling" />
+
+  <ol class="rows">
+    {workItems.map((item, index) => (
+      <li>
+        <a href="#work" class="row">
+          <span class="index">{String(index + 1).padStart(2, '0')}</span>
+          <span class="title">{item.title.toUpperCase()}</span>
+          <span class="description">{item.description}</span>
+          <span class="year">{item.year}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .work {
+    padding: 100px var(--section-padding-x);
+    border-top: var(--section-border);
+  }
+
+  .rows {
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 60px 1fr 220px 70px;
+    align-items: center;
+    padding: 28px 16px;
+    border-top: 1px solid var(--color-border-strong);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+  }
+
+  li:last-child .row {
+    border-bottom: 1px solid var(--color-border-strong);
+  }
+
+  .row:hover {
+    background: var(--color-row-hover);
+  }
+
+  .index,
+  .year {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.12em;
+  }
+
+  .year {
+    text-align: right;
+  }
+
+  .title {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+  }
+
+  .description {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+  }
+</style>

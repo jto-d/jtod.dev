@@ -1,0 +1,34 @@
+---
+import { nowNote } from '@data/site';
+---
+
+<div>
+  <div class="eyebrow">Now — 04</div>
+  <p class="body">{nowNote.body}</p>
+  <div class="updated">Updated {nowNote.updated.toUpperCase()}</div>
+</div>
+
+<style>
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 36px;
+  }
+
+  .body {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-text-body);
+    margin: 0;
+  }
+
+  .updated {
+    margin-top: 24px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+import { writingPosts } from '@data/site';
+---
+
+<div>
+  <div class="eyebrow">Writing — 03</div>
+  {writingPosts.map((post) => (
+    <a href="#writing" class="post">
+      <div class="title">{post.title}</div>
+      <div class="meta">{post.date.toUpperCase()} &middot; {post.readTime.toUpperCase()}</div>
+    </a>
+  ))}
+</div>
+
+<style>
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 36px;
+  }
+
+  .post {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 22px 0;
+    border-top: 1px solid var(--color-border-strong);
+    transition: color 0.2s;
+  }
+
+  .post:last-child {
+    border-bottom: 1px solid var(--color-border-strong);
+  }
+
+  .post:hover {
+    color: var(--color-accent);
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .meta {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-top: 8px;
+  }
+</style>
