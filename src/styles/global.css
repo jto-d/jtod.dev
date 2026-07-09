@@ -65,7 +65,7 @@ a {
     transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(8%, -6%) scale(1.16);
+    transform: translate(12%, -6%) scale(1.16);
   }
   100% {
     transform: translate(0, 0) scale(1);
@@ -77,7 +77,7 @@ a {
     transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(-9%, 8%) scale(1.22);
+    transform: translate(-10%, 9%) scale(1.23);
   }
   100% {
     transform: translate(0, 0) scale(1);
@@ -86,12 +86,12 @@ a {
 
 @keyframes drift3 {
   0% {
-    transform: translate(0, 0) scale(1.08);
+    transform: translate(0, 0) scale(1.2);
   }
   50% {
-    transform: translate(7%, 9%) scale(0.94);
+    transform: translate(8%, 10%) scale(0.94);
   }
   100% {
-    transform: translate(0, 0) scale(1.08);
+    transform: translate(0, 0) scale(1.2);
   }
 }

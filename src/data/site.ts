@@ -2,9 +2,9 @@ export const profile = {
   name: "Jack O'Donnell",
   role: 'Software Engineer',
   tagline: 'Infrastructure, tooling, and the interfaces between',
-  location: 'Portland, OR',
+  location: 'San Francisco, CA',
   buildingSince: 2015,
-  email: 'jack@odonnell.dev',
+  email: 'jack@jtod.dev',
 };
 
 export const focusAreas = [
@@ -48,8 +48,8 @@ export const writingPosts: WritingPost[] = [
 ];
 
 export const nowNote = {
-  body: 'Currently at a seed-stage infra company, building the thing that pages you before the customer notices. Reading about consensus. Learning to develop black-and-white film in my kitchen.',
-  updated: 'Jun 2026',
+  body: 'Currently at Watershed building software to help companies calculate their carbon footprint. Reading about urban planning and sustainability. Building a personal finance tracker and improving my aerobic threshold.',
+  updated: 'Jul 2026',
 };
 
 export interface NavLink {
